@@ -9,16 +9,15 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        sh 'pip install -r requirements.txt'
+        bat 'pip install -r requirements.txt'
       }
     }
 
     stage('Run Extract Values Script') {
       steps {
         script {
-          sh "${PYTHON_PATH} get_data_from_pdf.py"
+          bat "python get_data_from_pdf.py"
         }
-
       }
     }
 
@@ -27,10 +26,9 @@ pipeline {
         archiveArtifacts(artifacts: '**/*.csv, **/*.txt, **/*.png', allowEmptyArchive: true)
       }
     }
-
   }
   environment {
-    PYTHON_PATH = '/usr/bin/python3'
+    PYTHON_PATH = 'C:\Users\Hp\AppData\Local\Programs\Python\Python311' // Update this to your Python path
   }
   post {
     always {
@@ -44,6 +42,5 @@ pipeline {
     failure {
       echo 'Pipeline failed. Check logs for details.'
     }
-
   }
 }
