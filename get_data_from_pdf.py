@@ -89,7 +89,7 @@ def car_registrations_source_monthly():
     reversed_df = pd.DataFrame(reversed_output_rows, columns=['year', 'month', 'category', 'country', 'Registrations'])
 
     # Step 7: Create the output file name dynamically
-    output_path = f"./processed/{month}_{year}_car_registrations_monthly.csv".lower()
+    output_path = f"{month}_{year}_car_registrations_monthly.csv".lower()
 
     # Step 12: Save the reversed DataFrame to a CSV
     reversed_df.to_csv(output_path, index=False)
@@ -173,7 +173,7 @@ def car_registrations_market_year_to_date():
     reversed_df = pd.DataFrame(reversed_output_rows, columns=['year', 'month', 'category', 'country', 'Registrations'])
 
     # Step 11: Save the reversed DataFrame to a CSV with dynamic filename
-    output_path = f"./processed/{month}_{year}_car_registrations_market_year_to_date.csv".lower()  # Dynamic output path
+    output_path = f"{month}_{year}_car_registrations_market_year_to_date.csv".lower()  # Dynamic output path
     
     reversed_df.to_csv(output_path, index=False)
     
@@ -214,7 +214,7 @@ def car_registrations_by_manufacturer_EU():
     df_cleaned = df_cleaned[['Year', 'Month', 'Country', '%Share', 'Units']]
 
     # Step 10: Save the transformed data to a CSV file
-    output_path = f"./processed/{month}_{year}_car_registrations_by_manufacturer_EU.csv"  # Dynamic output path
+    output_path = f"{month}_{year}_car_registrations_by_manufacturer_EU.csv"  # Dynamic output path
     df_cleaned.to_csv(output_path, index=False)
 
     print(f"Data processed and saved to: {output_path}")
@@ -253,7 +253,7 @@ def car_registrations_by_manufacturer_EU_EFTA_UK():
     df_cleaned = df_cleaned[['Year', 'Month', 'Country', '%Share', 'Units']]
 
     # Step 7: Save the transformed data to a CSV file
-    output_path = f"./processed/{month}_{year}_car_registrations_by_manufacturer_EU_EFTA_UK.csv"  # Dynamic output path
+    output_path = f"{month}_{year}_car_registrations_by_manufacturer_EU_EFTA_UK.csv"  # Dynamic output path
     df_cleaned.to_csv(output_path, index=False)
 
     print(f"Data processed and saved to: {output_path}")
