@@ -4,7 +4,7 @@ import re
 
 def car_registrations_source_monthly():
     # Define the input file path and output directory directly in the function
-    input_path = "./extracted_tables/table_3.csv"  # Specify input file path here
+    input_path = "table_3.csv"  # Specify input file path here
 
     # Read the CSV file
     df = pd.read_csv(input_path)
@@ -98,7 +98,7 @@ def car_registrations_source_monthly():
 
 def car_registrations_market_year_to_date():
     # Define the input file path here
-    input_path = "./extracted_tables/table_4.csv"  # Input file path
+    input_path = "table_4.csv"  # Input file path
     
     # Read the CSV file
     df = pd.read_csv(input_path)
@@ -182,7 +182,7 @@ def car_registrations_market_year_to_date():
 
 def car_registrations_by_manufacturer_EU():
     # Step 1: Read the CSV file
-    df = pd.read_csv("./extracted_tables/table_5.csv")  # Use the new input file path
+    df = pd.read_csv("table_5.csv")  # Use the new input file path
 
     # Step 2: Clean the DataFrame - Drop rows that are completely empty
     df_cleaned = df.dropna(how='all')
@@ -222,7 +222,7 @@ def car_registrations_by_manufacturer_EU():
 
 def car_registrations_by_manufacturer_EU_EFTA_UK():
     # Read the CSV file
-    df = pd.read_csv("./extracted_tables/table_6.csv")
+    df = pd.read_csv("table_6.csv")
 
     # Step 1: Clean the DataFrame
     df_cleaned = df.dropna(how='all')  # Drop rows that are completely empty
