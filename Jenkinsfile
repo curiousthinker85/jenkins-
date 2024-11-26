@@ -28,7 +28,7 @@ pipeline {
     }
   }
   environment {
-    PYTHON_PATH = 'C:\Users\Hp\AppData\Local\Programs\Python\Python311' // Update this to your Python path
+    PYTHON_PATH = 'C:\\Users\\Hp\\AppData\\Local\\Programs\\Python\\Python311\\python.exe' // Update this to your Python path
   }
   post {
     always {
